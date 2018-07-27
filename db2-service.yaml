@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: stocktrade-ibm-db2oltp-dev
+  namespace: stock-trader
+  labels:
+    app: stocktrade-ibm-db2oltp-dev
+spec:
+  type: ExternalName
+  externalName: stocktrade-ibm-db2oltp-dev.stock-trader-data.svc.cluster.local
+  ports:
+  - port: 50000
